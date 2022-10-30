@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left {
+  background-color: rgb(255, 227, 227);
+  width: 15%;
+  border-right: 1px solid rgb(204, 204, 204);
+}
+
+.menu-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.header {
+  height: 15%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.menu {
+  height: 45%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.menu-items {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 20px;
+  font-family: "Arial", sans-serif;
+}
+i {
+  transition: all 0.3s ease;
+}
+.menu-items > i:hover {
+  transform: scale(1.4);
+  font-weight: 900;
+}
+.more > i:hover {
+  transform: scale(1.4);
+  font-weight: 900;
+}
+.bottom {
+  height: 40%;
+  position: relative;
+}
+#photo {
+  transform: scale(1.5) translate(25px, 10px);
+}
+.more {
+  position: absolute;
+  display: block;
+  top: 50%;
+  font-size: 28px;
+  font-weight: 600;
+  left: 9%;
+  cursor: pointer;
+  transform: translateY(160px);
+}
+/* MIDDLE PART AND RIGHT PART*/
+
+.right {
+  background-color: rgba(255, 255, 255, 0.248);
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.middle {
+  height: 100%;
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.stories-part {
+  height: 150px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid rgb(204, 204, 204);
+  margin-bottom: 0.5rem;
+  border-radius: 0.4rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.story-profile {
+  height: 80px;
+  width: 80px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.story-profile:hover {
+  transform: scale(1.1);
+  border-radius: 25%;
+  border: 1px solid black;
+}
+
+.profile1 {
+  background-image: url(img/fastandfur.jpg);
+  background-size: cover;
+}
+.profile2 {
+  background-image: url(img/harrypotter.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.profile3 {
+  background-image: url(img/lotr.jpg);
+  background-size: cover;
+}
+.profile4 {
+  background-image: url(img/naruto.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.profile5 {
+  background-image: url(img/sherlock.jpg);
+  background-size: cover;
+}
+.profile6 {
+  background-image: url(img/interstellar.jpg);
+  background-size: cover;
+}
+.story-profile-name {
+  text-align: center;
+  transform: translate(1px, 85px);
+}
+
+.post {
+  height: 1020px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 0.4rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.img {
+  height: 200px;
+}
+
+.post1 {
+  display: flex;
+  flex-direction: column;
+}
+.post-top {
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+.post-profile {
+  height: 50px;
+  width: 50px;
+  background: url(img/avatar.jpg);
+  background-size: cover;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.post-first-part {
+  display: flex;
+  align-items: center;
+}
+.threedot {
+  transform: scale(3) translate(-3px, -3px);
+  cursor: pointer;
+}
+.post-username {
+  margin-left: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.post-middle {
+  width: 100%;
+  height: 60%;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  background-image: url("img/lotr.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.post-bottom {
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.post-buttons {
+  width: 100%;
+  height: 17%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+.buttons-left {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 30px;
+  justify-content: space-between;
+  margin-left: 5px;
+  width: 100px;
+}
+.like,
+.comment {
+  margin-right: 15px;
+}
+.buttons-middle {
+  width: 100px;
+}
+
+.buttons-threedot {
+  transform: scale(4) translate(30px, 0);
+}
+.save {
+  margin-top: 15px;
+  margin-right: 25px;
+  transform: scale(2);
+}
+
+.text-area {
+  width: 100%;
+  height: 70%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+.people-like {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  height: 33%;
+}
+.post-description {
+  height: 33%;
+  padding: 2px 15px;
+}
+.liked {
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 22px;
+}
+.like-profile {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.post-description {
+  display: flex;
+  font-family: "Ubuntu";
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+.user-post {
+  font-weight: 800;
+}
+
+.add-comment {
+  width: 100%;
+  height: 18%;
+  border: 1px solid white;
+  display: flex;
+  position: relative;
+  background-color: white;
+  font-size: 20px;
+  border-top: 1px solid rgb(204, 204, 204);
+}
+.smile-face {
+  width: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(2);
+}
+.comment-input {
+  width: 92%;
+  border: none;
+  font-size: 22px;
+}
+.like,
+.comment,
+.share,
+.save {
+  cursor: pointer;
+}
+.right-profile {
+  height: 550px;
+  width: 520px;
+  background-color: rgb(131, 131, 131);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgb(204, 204, 204);
+  margin-left: 12px;
+  border-radius: 8px;
+  margin-top: 36px;
+  border-right: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+.profile-top {
+  width: 100%;
+  height: 20%;
+  background-color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.profile-names-part {
+  margin-left: -230px;
+}
+.profile--username {
+  font-weight: 800;
+}
+.go-to {
+  color: rgb(0, 184, 212);
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  cursor: pointer;
+  font-weight: 700;
+}
+.profile-photo {
+  height: 5rem;
+  width: 5rem;
+  background-image: url("img/fastandfur.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+.profile-middle {
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+.middle-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 20px;
+  font-size: 20px;
+}
+.users {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  height: 355px;
+  padding: 10px 20px;
+}
+.user-profile1 {
+  display: flex;
+}
+.user-profile-photo1 {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  background-image: url(img/avatar.jpg);
+  background-size: cover;
+}
+.user-profile-photo2 {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  background-image: url(img/lotr.jpg);
+  background-size: cover;
+}
+.user-profile-photo3 {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  background-image: url(img/naruto.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.user-profile-photo4 {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  background-image: url(img/sherlock.jpg);
+  background-size: cover;
+}
+.user-profile-photo5 {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  background-image: url(img/harrypotter.jpg);
+  background-size: cover;
+}
+.user-profile1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-profile-left {
+  display: flex;
+  align-items: center;
+}
+.user-profile-name {
+  margin-left: 12px;
+  font-size: 20px;
+}
+.profile-bottom {
+  width: 100%;
+  height: 10%;
+  background-color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+.profile-bottom-menu {
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.profile-bottom-menu li > a {
+  color: rgba(0, 0, 0, 0.434);
+  text-decoration: none;
+  list-style-type: none;
+}
+.right-profile > div {
+  cursor: pointer;
+}
+.advice {
+  color: rgba(0, 0, 0, 0.434);
+}
+.follow {
+  color: rgb(0, 184, 212);
+  font-weight: 800;
+}
+.profile-bottom-menu li a:hover {
+  color: rgba(0, 0, 0, 0.629);
+  font-weight: 500;
+}
+.follow:hover {
+  color: rgb(0, 135, 156);
+}
+.all:hover {
+  color: rgb(47, 47, 47);
+}
+.create-new-post-container {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  width: 750px;
+  height: 920px;
+  border-radius: 12px;
+}
+.new-post-header {
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.202);
+}
+.new-post-header-content {
+  color: black;
+}
+.new-post-middle-part {
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+.new-post-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+}
+.new-post-exp {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -10%);
+  font-family: "Arial", sans-serif;
+  color: rgba(0, 0, 0, 0.33);
+}
+.new-post-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 110%);
+  width: 160px;
+  height: 40px;
+  background: #1877f2;
+  color: rgba(255, 255, 255, 0.712);
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.new-post-btn:hover {
+  background: #1070ed;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
